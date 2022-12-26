@@ -1,0 +1,360 @@
+{
+	"info": {
+		"_postman_id": "22d70a16-2a98-47d2-a049-fa688563c295",
+		"name": "Prueba soap",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3456232"
+	},
+	"item": [
+		{
+			"name": "Servicio soap Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n\n  <soap12:Body>\n    <registroCliente>\n        <documento> documento1 </documento> \n        <nombre> nombre1 </nombre> \n        <email> email1 </email> \n        <celular> celular1 </celular> \n    </registroCliente>\n  </soap12:Body>\n\n</soap12:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/soap/cliente.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"soap",
+						"cliente.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Servicio rest Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "documento",
+							"value": "documento",
+							"type": "text"
+						},
+						{
+							"key": "celular",
+							"value": "celular",
+							"type": "text"
+						},
+						{
+							"key": "nombres",
+							"value": "nombres",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "email",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cliente/registro",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cliente",
+						"registro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Servicio soap Recarga",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n\n  <soap12:Body>\n    <recargaCliente>\n        <documento> documento </documento> \n        <celular> celular </celular> \n        <valor> 10 </valor>\n    </recargaCliente>\n  </soap12:Body>\n\n</soap12:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/soap/cliente.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"soap",
+						"cliente.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Servicio rest Recarga",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "documento",
+							"value": "documento",
+							"type": "text"
+						},
+						{
+							"key": "celular",
+							"value": "celular",
+							"type": "text"
+						},
+						{
+							"key": "valor",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cliente/recarga",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cliente",
+						"recarga"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Servicio soap pagar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n\n  <soap12:Body>\n    <pagarcliente>\n        <documento> documento </documento> \n        <celular> celular </celular> \n        <pago> 10 </pago>\n    </pagarcliente>\n  </soap12:Body>\n\n</soap12:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/soap/cliente.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"soap",
+						"cliente.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Servicio rest pagar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "documento",
+							"value": "documento",
+							"type": "text"
+						},
+						{
+							"key": "celular",
+							"value": "celular",
+							"type": "text"
+						},
+						{
+							"key": "pago",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cliente/pago",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cliente",
+						"pago"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Servicio soap confirmar pago",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n\n  <soap12:Body>\n    <confirmaPagoCliente>\n        <token>033828</token>\n    </confirmaPagoCliente>\n  </soap12:Body>\n\n</soap12:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/soap/cliente.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"soap",
+						"cliente.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Servicio rest confirmar pago",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "347385",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cliente/confirmarPago",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cliente",
+						"confirmarPago"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Servicio soap Saldo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n\n  <soap12:Body>\n    <saldoCliente>\n        <documento> documento </documento> \n        <celular> celular </celular> \n    </saldoCliente>\n  </soap12:Body>\n\n</soap12:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/soap/cliente.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"soap",
+						"cliente.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Servicio rest Saldo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "documento",
+							"value": "documento",
+							"type": "text"
+						},
+						{
+							"key": "celular",
+							"value": "celular",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cliente/saldo",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cliente",
+						"saldo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
